@@ -10,5 +10,11 @@ import "./styling/select.css"
 import "./styling/checkbox.css"
 import "./styling/slider.css"
 import "./styling/tooltip.css"
+import { isEnvBrowser } from "./utils/misc";
+
+// In the production build, this block is removed.
+if (isEnvBrowser()) {
+	import("./dev/mock").then((m) => m.isInBrowser());
+}
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(<App />);
