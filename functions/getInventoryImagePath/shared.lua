@@ -1,6 +1,8 @@
 local inventoryResources = {
     ["OX"] = "ox_inventory",
     ["QS"] = "qs-inventory",
+    ["WASABI"] = "wasabi_inventory",
+    ["ONE"] = "one_inventory",
     ["TGIANN"] = "tgiann-inventory",
     ["CODEM"] = "codem-inventory",
     ["C8RE"] = "core_inventory",

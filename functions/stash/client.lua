@@ -51,6 +51,8 @@ function Functions.stash.open(invId, other)
         })
 
         TriggerEvent("inventory:client:SetCurrentStash", invId)
+    elseif (Inventory == "WASABI") then
+        return exports["wasabi_inventory"]:openInventory("stash", invId)
     elseif (Inventory == "TGIANN") then
         return exports["tgiann-inventory"]:OpenInventory("stash", invId, {
             maxweight = weight,

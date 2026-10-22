@@ -4,6 +4,7 @@ local awaitSystemStarting, override, awaitAnySystemStarting = ...
 local systems = {
     {fileName = "one_inventory", variable = "ONE"},
     {fileName = "qs-inventory", variable = "QS"},
+    {fileName = "wasabi_inventory", variable = "WASABI"},
     {fileName = "ox_inventory", variable = "OX"},
     {fileName = "tgiann-inventory", variable = "TGIANN"},
     {fileName = "codem-inventory", variable = "CODEM"},
@@ -70,6 +71,8 @@ repeat
             items = exports["codem-inventory"]:GetItemList()
         elseif (Inventory == "QS") then
             items = exports['qs-inventory']:GetItemList()
+        elseif (Inventory == "WASABI") then
+            items = exports["wasabi_inventory"]:ItemList()
         else
             -- ESX items only exist on the server side for some reason
             if (Framework == "ESX") then

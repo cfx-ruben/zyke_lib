@@ -17,6 +17,8 @@ function Functions.getPlayerItems(player, toInclude, options)
 
     if (_inv == "QS") then
         inventory = exports['qs-inventory']:GetInventory(plyId) or {}
+    elseif (_inv == "WASABI") then
+        inventory = exports["wasabi_inventory"]:GetInventory(plyId) or {}
     elseif (_inv == "TGIANN") then
         inventory = exports["tgiann-inventory"]:GetPlayerItems(plyId) or {}
     elseif (_inv == "CODEM") then

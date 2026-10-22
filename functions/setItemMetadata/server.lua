@@ -9,6 +9,8 @@ function Functions.setItemMetadata(plyId, slot, metadata)
         return exports["one_inventory"]:SetItemMetadata(plyId, slot, metadata)
     elseif (Inventory == "QS") then
         return exports["qs-inventory"]:SetItemMetadata(plyId, slot, metadata)
+    elseif (Inventory == "WASABI") then
+        return exports["wasabi_inventory"]:SetMetadata(plyId, slot, metadata)
     elseif (Inventory == "TGIANN") then
         local item = Functions.getInventorySlot(plyId, slot)
         if (not item) then return false end

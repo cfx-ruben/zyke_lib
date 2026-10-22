@@ -90,6 +90,10 @@ function Functions.stash.clear(id)
         ok, result = pcall(function()
             return exports["qs-inventory"]:ClearOtherInventory("stash", id)
         end)
+    elseif (Inventory == "WASABI") then
+        ok, result = pcall(function()
+            return exports["wasabi_inventory"]:ClearInventory(id)
+        end)
     elseif (Inventory == "TGIANN") then
         ok, result = pcall(function()
             return exports["tgiann-inventory"]:DeleteInventory("stash", id)

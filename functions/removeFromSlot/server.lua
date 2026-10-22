@@ -19,6 +19,9 @@ function Functions.removeFromSlot(plyId, item, amount, slot)
     elseif (Inventory == "QS") then
         exports["qs-inventory"]:RemoveItem(plyId, item, amount, slot)
         return
+    elseif (Inventory == "WASABI") then
+        exports["wasabi_inventory"]:RemoveItem(plyId, item, amount, nil, slot)
+        return
     elseif (Inventory == "C8RE") then
         local itemId = exports["core_inventory"]:getItemBySlot(plyId, slot).id
 

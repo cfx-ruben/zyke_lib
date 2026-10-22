@@ -19,6 +19,8 @@ function Functions.getInventorySlot(plyId, slot)
         end
 
         return nil
+    elseif (Inventory == "WASABI") then
+        return Formatting.formatItem(exports["wasabi_inventory"]:GetSlot(plyId, slot))
     end
 
     -- QB default or fallback

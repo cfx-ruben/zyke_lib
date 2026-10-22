@@ -17,6 +17,8 @@ function Functions.addItem(player, item, amount, metadata)
             if (not success) then return false end
         elseif (Inventory == "QS") then
             exports['qs-inventory']:AddItem(Functions.getPlayerId(player), items[i].name, items[i].amount, nil, items[i].metadata)
+        elseif (Inventory == "WASABI") then
+            exports["wasabi_inventory"]:AddItem(Functions.getPlayerId(player), items[i].name, items[i].amount, items[i].metadata, nil)
         elseif (Framework == "ESX") then
             player.addInventoryItem(items[i].name, items[i].amount, items[i].metadata)
         elseif (Framework == "QB") then
